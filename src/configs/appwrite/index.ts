@@ -1,10 +1,10 @@
 import {
-    Account,
-    Avatars,
-    Client,
-    Databases,
-    Functions,
-    Storage,
+  Account,
+  Avatars,
+  Client,
+  Databases,
+  Functions,
+  Storage,
 } from "react-native-appwrite";
 import { Env } from "../env";
 
