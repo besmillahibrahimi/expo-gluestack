@@ -337,7 +337,8 @@ const FormControlErrorIcon = React.forwardRef<
         size={size}
       />
     );
-  } else if (
+  }
+  if (
     (props.height !== undefined || props.width !== undefined) &&
     size === undefined
   ) {
@@ -458,11 +459,11 @@ FormControlHelperText.displayName = "FormControlHelperText";
 export {
   FormControl,
   FormControlError,
-  FormControlErrorText,
   FormControlErrorIcon,
-  FormControlLabel,
-  FormControlLabelText,
-  FormControlLabelAstrick,
+  FormControlErrorText,
   FormControlHelper,
   FormControlHelperText,
+  FormControlLabel,
+  FormControlLabelAstrick,
+  FormControlLabelText,
 };
