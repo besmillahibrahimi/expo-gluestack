@@ -11,11 +11,11 @@ export type ModeType = "light" | "dark" | "system";
 export function GluestackUIProvider({
   mode = "light",
   ...props
-}: {
+}: Readonly<{
   mode?: ModeType;
   children?: React.ReactNode;
   style?: ViewProps["style"];
-}) {
+}>) {
   const { colorScheme, setColorScheme } = useColorScheme();
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>

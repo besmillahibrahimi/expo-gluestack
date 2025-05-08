@@ -1,5 +1,30 @@
+import "@/configs/i18n";
+import { ThemeProvider } from "@/providers/ThemProvider";
+import "@/styles/global.css";
+import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
+import "react-native-reanimated";
 
 export default function RootLayout() {
-  return <Stack />;
+  const [loaded] = useFonts({
+    VazirmatnBlack: require("../assets/fonts/Vazirmatn-Black.ttf"),
+    VazirmatnBold: require("../assets/fonts/Vazirmatn-Bold.ttf"),
+    VazirmatnExtraBold: require("../assets/fonts/Vazirmatn-ExtraBold.ttf"),
+    VazirmatnExtraLight: require("../assets/fonts/Vazirmatn-ExtraLight.ttf"),
+    VazirmatnLight: require("../assets/fonts/Vazirmatn-Light.ttf"),
+    VazirmatnMedium: require("../assets/fonts/Vazirmatn-Medium.ttf"),
+    VazirmatnRegular: require("../assets/fonts/Vazirmatn-Regular.ttf"),
+    VazirmatnSemiBold: require("../assets/fonts/Vazirmatn-SemiBold.ttf"),
+    VazirmatnThin: require("../assets/fonts/Vazirmatn-Thin.ttf"),
+  });
+
+  if (!loaded) {
+    return null;
+  }
+
+  return (
+    <ThemeProvider>
+      <Stack />
+    </ThemeProvider>
+  );
 }

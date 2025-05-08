@@ -8,7 +8,6 @@
     "scheme": "learningapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "entryPoint": "./src/app/index.tsx",
     "ios": {
       "supportsTablet": true
     },
@@ -29,7 +28,7 @@
       [
         "expo-router",
         {
-          "appRoot": "src/app"
+          "root": "src/app"
         }
       ],
       [
