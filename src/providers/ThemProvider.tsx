@@ -1,4 +1,4 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { secureStorage } from "@/lib/secure-storage";
 import {
   createContext,
   useCallback,
@@ -24,17 +24,17 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     (async () => {
       const savedTheme =
-        ((await AsyncStorage.getItem("theme")) as Theme) ?? "light";
+        ((await secureStorage.getItem("theme")) as Theme) ?? "light";
 
       setTheme(savedTheme);
-      AsyncStorage.setItem("theme", savedTheme);
+      secureStorage.setItem("theme", savedTheme);
     })();
   }, []);
 
   const toggleTheme = useCallback(() => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    AsyncStorage.setItem("theme", newTheme);
+    secureStorage.setItem("theme", newTheme);
   }, [theme]);
 
   const value = useMemo(() => ({ theme, toggleTheme }), [theme, toggleTheme]);

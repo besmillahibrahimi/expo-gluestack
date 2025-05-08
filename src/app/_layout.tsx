@@ -1,9 +1,10 @@
 import "@/configs/i18n";
-import { ThemeProvider } from "@/providers/ThemProvider";
+import Providers from "@/providers";
 import "@/styles/global.css";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import "react-native-reanimated";
+import "react-native-url-polyfill/auto";
 
 export default function RootLayout() {
   const [loaded] = useFonts({
@@ -23,8 +24,8 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider>
+    <Providers>
       <Stack />
-    </ThemeProvider>
+    </Providers>
   );
 }
