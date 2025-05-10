@@ -95,9 +95,6 @@ importers:
       '@supabase/supabase-js':
         specifier: ^2.49.4
         version: 2.49.4
-      babel-plugin-module-resolver:
-        specifier: ^5.0.2
-        version: 5.0.2
       expo:
         specifier: ~53.0.8
         version: 53.0.8(@babel/core@7.27.1)(@expo/metro-runtime@5.0.4(react-native@0.79.2(@babel/core@7.27.1)(@types/react@19.0.14)(react@19.0.0)))(react-native-webview@13.13.5(react-native@0.79.2(@babel/core@7.27.1)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.2(@babel/core@7.27.1)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0)
@@ -197,9 +194,6 @@ importers:
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17
-      tslib:
-        specifier: ^2.8.1
-        version: 2.8.1
       zod:
         specifier: ^3.24.4
         version: 3.24.4
@@ -216,6 +210,9 @@ importers:
       '@types/react':
         specifier: ~19.0.10
         version: 19.0.14
+      babel-plugin-module-resolver:
+        specifier: ^5.0.2
+        version: 5.0.2
       eslint:
         specifier: ^9.25.0
         version: 9.26.0(jiti@1.21.7)
@@ -228,6 +225,9 @@ importers:
       lint-staged:
         specifier: ^15.5.2
         version: 15.5.2
+      tslib:
+        specifier: ^2.8.1
+        version: 2.8.1
       typescript:
         specifier: ~5.8.3
         version: 5.8.3
